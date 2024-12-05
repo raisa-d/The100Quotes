@@ -22,7 +22,7 @@ This is my first CRUD (Create, Read, Update, Delete) application built using **N
 ## Lessons Learned
 - **Using Express**: This was my first time importing and using Express. I learned how to set up routes and handle GET and POST requests.
 - **Connecting to MongoDB Atlas**: Initially, I struggled with errors when connecting to MongoDB Atlas. I discovered that my database password contained special characters, which required encoding. After fixing this, I successfully established the connection.
-- **CRUD Operations**: Implementing Create, Read, Update, and Delete functionality helped me understand how to interact with a database from an Express server.
+- **CRUD Operations**: Implementing Create, Read, Update, and Delete functionality with MongoDB Atlas helped me understand how to interact with a database from an Express server and what build in methods with MongoDB Atlas are necessary. I will likely learn Mongoose in the future.
 - **Connecting to localhost**: I kept having an issue where my server would work, I wouldn't change the code at all but would close it and come back to it. When I came back the server wouldn't load. In the end, it was solved by deleting the node_modules folder and reinstalling it. This may mean node_modules had corrupted or there were incompatible dependencies.
 - **Practice with Async/Await**: Reworking my code from using promise chaining to async/await syntax helped me get in the flow of using async/await.
 - **Encountering EJS/Template Engines For The First Time** 

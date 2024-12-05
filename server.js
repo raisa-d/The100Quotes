@@ -67,7 +67,16 @@ async function startServer() {
                 console.log(result)
                 res.json('Success')
         } catch (err){console.error(err)}
-        })
+        });
+
+        // delete
+        app.delete('/quotes', async (req, res) => {
+            const result = await quotesCollection.deleteOne({ name: 'Indra Kom Trikru' });
+            if(result.deletedCount === 0) {
+                return res.json('No quote to delete')
+            }
+            res.json('Deleted Indra\'s quote');
+        });
 
         // listen on port 3000
         app.listen(3000, () => console.log('Listening on 3000'));
