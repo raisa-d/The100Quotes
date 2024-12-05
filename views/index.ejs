@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The 100 Quotes</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
-<body>
+<body class="flex flex-col align-center">
     <h1>The 100 Quotes</h1>
-    <form action="/quotes" method="POST">
+    <form action="/quotes" method="POST" class="flex flex-col align-center container">
         <label>Name
             <input type="text" placeholder="Octavia Blake" name="name">
         </label>
@@ -16,26 +17,28 @@
         </label>
         <button type="submit">Submit</button>
     </form>
-    <h2>Quotes</h2>
-    <ul class="quotes">
-        <!-- loop through quotes -->
-         <% for(let i = 0; i < quotes.length; i++) {%>
-            <li class="quote">
-                <span>
-                    <%= quotes[i].name %>:
-                </span>
-                <span>
-                    "<%= quotes[i].quote %>"
-                </span>
-            </li>
-        <% } %>
-    </ul>
-    <div>
+    <div class="container quotes">
+        <h2>Quotes</h2>
+        <ul class="quotes">
+            <!-- loop through quotes -->
+             <% for(let i = 0; i < quotes.length; i++) {%>
+                <li class="quote">
+                    <span>
+                        <%= quotes[i].name %>:
+                    </span>
+                    <span>
+                        "<%= quotes[i].quote %>"
+                    </span>
+                </li>
+            <% } %>
+        </ul>
+    </div>
+    <div class="container invasion flex flex-col align-center">
         <h2>Trikru invades!</h2>
         <p>Replace the first quote with a quote written by a Trikru warrior</p>
         <button id="update-button">Replace Quote</button>
     </div>
-    <div>
+    <div class="container flex flex-col align-center">
         <h2>Remove Indra's Quote</h2>
         <p>
             Delete one of Indra's quotes. Does nothing if there are no more Indra quotes.
