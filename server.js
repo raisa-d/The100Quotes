@@ -7,11 +7,10 @@ const uri = `mongodb+srv://trikru:${password}@cluster0.atp5l.mongodb.net/?retryW
 
 // connect to MongoDB
 MongoClient.connect(uri)
-    .then(
-    console.log('Connected to Database')
-    ).catch(error => console.error(error));
-
-app.listen(3000, () => {
+    .then(client => {
+    console.log('Connected to Database');
+    const db = client.db('the-100-quotes');
+    
     // middleware to get values out of inputs
     app.use(express.urlencoded({ extended: true }));
 
@@ -19,9 +18,14 @@ app.listen(3000, () => {
     app.get('/', (req, res) => {
         res.sendFile(__dirname + '/index.html');
     });
-    
-    // post request
+
+     // post request to get values out of form and into request body
     app.post('/quotes', (req, res) => {
         console.log(req.body);
     });
-});
+
+    // listen on port 3000
+    app.listen(3000, () => console.log('Listening on 3000'));
+
+    })
+    .catch(error => console.error(error));
