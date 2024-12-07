@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 const MongoClient = require('mongodb').MongoClient;
-const password = encodeURIComponent(`0jN0}@4&k'a|`)
+const password = encodeURIComponent(``)
 const uri = `mongodb+srv://trikru:${password}@cluster0.atp5l.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`
 
 async function startServer() {

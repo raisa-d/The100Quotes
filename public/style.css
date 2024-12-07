@@ -1,9 +1,17 @@
+/* COLOR Themes
+mustard - #f5bd63 - one card
+beige - #e7e9df - background
+baby blue - #88c0e0 - card
+rust - #ee9357 - card
+/* forest - #235f4c - accent color */
+*/
+
 /* DEFAULT STYLES */
 * {box-sizing: border-box;}
 
 body {
-    background: #2E4A46;
-    color: #fff;
+    /* background: #2E4A46; */
+    /* color: #fff; */
     font-size: 62.5%;
 }
 
@@ -41,8 +49,8 @@ input {font-size: 1rem;}
 }
 
 input, .quote {
-    background: #2E4A46;
-    color: #fff;
+    /* background: #2E4A46; */
+    /* color: #fff; */
     border: .1rem solid #fff;
     border-radius: 2rem;
     padding: 0.5rem 0 0.5rem 1rem;
@@ -50,9 +58,9 @@ input, .quote {
     width: 25rem;
 }
 
-input::placeholder {
-    color: rgba(255, 255, 255, 0.774);
-}
+/* input::placeholder { */
+    /* color: rgba(255, 255, 255, 0.774); */
+/* } */
 
 /* BUTTONS */
 button {
@@ -63,13 +71,13 @@ button {
     cursor: pointer;
     background-color: #253A34;
     border: .1rem solid #fff;
-    color: #fff;
+    /* color: #fff; */
 }
 
-button:hover {
-    color: black;
-    background: #fff;
-}
+/* button:hover { */
+    /* color: black; */
+    /* background: #fff; */
+/* } */
 
 /* QUOTES */
 h2 {
